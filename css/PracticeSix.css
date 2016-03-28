@@ -1,0 +1,149 @@
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,p{
+    padding:0;
+    margin:0;
+}
+
+.Article{
+    width:980px;
+    height:1386px;
+    margin:0 auto;
+}
+
+#article-header,#article-section{
+    width:892px;
+    margin:0 auto;
+    border-bottom:2px solid #938e8c;
+}
+
+#article-header h1{
+    width:110px;
+    height:61px;
+    display: inline-block;
+    float:left;
+    color:#fff;
+    background:#d45d5c;
+    font-size:12px;
+    font-family:"黑体";
+    font-weight:normal;
+    text-indent:4px;
+}
+
+#article-header h1 span {
+    vertical-align: -44px;
+}
+
+#article-header time {
+    float: right;
+    font-size: 12px;
+    font-family: "黑体";
+    color: #d45d5c;
+    position: relative;
+    top: 44px;
+}
+
+#article-header::after{
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+
+.section{
+    border:none !important;
+    margin:30px auto !important;
+}
+
+.section-left{
+    width:641px;
+    float:left;
+    background:url(../image/anyonebannertwo.png) no-repeat center center/100% border-box content-box;
+}
+
+.section-right{
+    float:right;
+    width:203px;
+    height:301px;
+    border-top:2px solid #cc8091;
+    box-sizing:border-box;
+}
+
+.section-right h1 {
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+    font-weight: normal;
+    color: #000;
+    line-height: 40px;
+    text-decoration: underline;
+}
+
+.section-right h2{
+    font-size:116px;
+    font-family:"Microsoft YaHei";
+    color:#75b86b;
+    font-style:oblique;
+    font-weight:600;
+}
+
+.section-right h3{
+    font-size:55px;
+    font-family:"Microsoft YaHei";
+    color:#cc8091;
+    font-weight:500;
+    float:left;
+}
+
+.section-right span{
+    position:relative;
+    display:block;
+    float:left;
+    font-size:21px;
+    font-family:"Microsoft YaHei";
+    top:20px;
+    color:#cc8091;
+}
+
+.section-right span abbr{
+    font-size:12px;
+    display:block;
+    color:rgb(189,189,189);
+}
+
+.section-right p{
+    font-size:12px;
+    font-family:"楷体";
+    line-height: 10px;
+    color:#676767;
+    font-style:oblique;
+}
+
+.articleLeft,.articleRight{
+    width:191px;
+    height:301px;
+    background-color:#75b86b;
+    opacity:0.5;
+    -moz-opacity:0.5;
+    -o-opacity:0.5;
+    -khtml-opacity:0.5;
+    -webkit-opacity:0.5;
+    filter:alpha(opacity=50);
+}
+
+.articleLeft{
+    float:left;
+}
+
+.articleRight{
+    float:right;
+    background-color:#cc8091;
+}
+
+
+.section::after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height:0;
+}
