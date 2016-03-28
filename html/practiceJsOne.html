@@ -19,20 +19,27 @@
          在事件处理函数中
          获取aqi-input输入的值，并显示在aqi-display中
          */
-        var Change = function(id){
-            this.id = id;
+//        var Change = function(id){
+//            this.id = id;
+//        };
+//
+//        Change.prototype.changeDisplay = function(input){
+//            var that = this;
+//            return function(){
+//                document.getElementById(input).innerHTML = document.getElementById(that.id).value;
+//            }
+//        };
+//
+//        var c1 = new Change("aqi-input");
+//        var button = document.getElementById("button");
+//        button.onclick = c1.changeDisplay("aqi-display");
+        Object.prototype.change = function (action, changeDisplay) {
+            this["on" + action] = changeDisplay;
         };
-
-        Change.prototype.changeDisplay = function(input){
-            var that = this;
-            return function(){
-                document.getElementById(input).innerHTML = document.getElementById(that.id).value;
-            }
-        };
-
-        var c1 = new Change("aqi-input");
         var button = document.getElementById("button");
-        button.onclick = c1.changeDisplay("aqi-display");
+        button.change("click", function () {
+            document.getElementById("aqi-display").innerHTML = document.getElementById("aqi-input").value;
+        });
     })();
 
 </script>
